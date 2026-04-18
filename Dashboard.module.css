@@ -1,0 +1,255 @@
+.header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  margin-bottom: 28px;
+}
+
+.title {
+  font-family: var(--font-display);
+  font-size: 52px;
+  letter-spacing: 3px;
+  line-height: 1;
+  color: #f1f5f9;
+}
+
+.subtitle {
+  font-family: var(--font-mono);
+  font-size: 10px;
+  letter-spacing: 2.5px;
+  color: var(--muted);
+  margin-top: 5px;
+}
+
+.winRateBadge {
+  text-align: center;
+  padding: 12px 20px;
+  background: var(--green-dim);
+  border: 1px solid var(--border-green);
+  border-radius: 4px;
+}
+
+.wrValue {
+  display: block;
+  font-family: var(--font-display);
+  font-size: 36px;
+  color: var(--green);
+  line-height: 1;
+}
+
+.wrLabel {
+  font-family: var(--font-mono);
+  font-size: 9px;
+  letter-spacing: 2px;
+  color: var(--muted);
+  margin-top: 2px;
+}
+
+.ctaBanner {
+  padding: 14px 18px;
+  background: rgba(251,191,36,0.06);
+  border: 1px solid rgba(251,191,36,0.15);
+  border-radius: 4px;
+  margin-bottom: 20px;
+  font-family: var(--font-mono);
+  font-size: 12px;
+  color: #d1d5db;
+}
+
+.ctaLink {
+  background: none;
+  border: none;
+  color: #fbbf24;
+  font-family: var(--font-mono);
+  font-size: 12px;
+  cursor: pointer;
+  text-decoration: underline;
+}
+
+.statsGrid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 14px;
+  margin-bottom: 24px;
+}
+
+.statCard {
+  background: var(--bg2);
+  border: 1px solid var(--border);
+  border-radius: 5px;
+  padding: 22px 20px;
+  position: relative;
+  overflow: hidden;
+  transition: border-color 0.25s;
+}
+
+.statCard::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0; right: 0;
+  height: 2px;
+  background: linear-gradient(90deg, var(--accent), transparent);
+}
+
+.statCard:hover { border-color: rgba(255,255,255,0.12); }
+
+.statIcon { font-size: 26px; margin-bottom: 10px; }
+
+.statValue {
+  font-family: var(--font-display);
+  font-size: 42px;
+  color: var(--accent);
+  line-height: 1;
+}
+
+.statLabel {
+  font-family: var(--font-mono);
+  font-size: 9px;
+  letter-spacing: 2px;
+  color: var(--muted);
+  margin-top: 5px;
+  text-transform: uppercase;
+}
+
+.lowerGrid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+}
+
+.card {
+  background: var(--bg2);
+  border: 1px solid var(--border);
+  border-radius: 5px;
+  padding: 24px;
+}
+
+.cardTitle {
+  font-family: var(--font-display);
+  font-size: 22px;
+  letter-spacing: 2px;
+  color: #f1f5f9;
+  margin-bottom: 16px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.matchRow {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 12px 0;
+  border-bottom: 1px solid var(--border);
+}
+
+.matchRow:last-of-type { border-bottom: none; }
+
+.matchTeams { font-size: 14px; font-weight: 700; color: var(--text); }
+
+.vs { color: var(--muted); font-weight: 400; }
+
+.matchMeta {
+  font-family: var(--font-mono);
+  font-size: 10px;
+  color: var(--muted);
+  margin-top: 3px;
+}
+
+.badgeUpcoming {
+  padding: 4px 10px;
+  background: var(--green-dim);
+  border: 1px solid var(--border-green);
+  border-radius: 2px;
+  font-family: var(--font-mono);
+  font-size: 9px;
+  letter-spacing: 1px;
+  color: var(--green);
+  flex-shrink: 0;
+  margin-left: 8px;
+}
+
+.badgeWon {
+  padding: 3px 8px;
+  background: var(--green-dim);
+  border-radius: 2px;
+  font-family: var(--font-mono);
+  font-size: 9px;
+  color: var(--green);
+}
+
+.badgeLost {
+  padding: 3px 8px;
+  background: rgba(239,68,68,0.1);
+  border-radius: 2px;
+  font-family: var(--font-mono);
+  font-size: 9px;
+  color: #ef4444;
+}
+
+.viewAllBtn {
+  margin-top: 16px;
+  background: none;
+  border: none;
+  color: var(--green);
+  font-family: var(--font-mono);
+  font-size: 11px;
+  cursor: pointer;
+  letter-spacing: 1px;
+}
+
+.emptyState {
+  text-align: center;
+  padding: 32px 0;
+  color: var(--muted);
+  font-family: var(--font-mono);
+  font-size: 12px;
+}
+
+.emptyIcon { font-size: 40px; margin-bottom: 12px; }
+
+.emptyBtn {
+  margin-top: 12px;
+  padding: 8px 20px;
+  background: var(--green-dim);
+  border: 1px solid var(--border-green);
+  border-radius: 2px;
+  color: var(--green);
+  font-family: var(--font-mono);
+  font-size: 11px;
+  letter-spacing: 1px;
+  cursor: pointer;
+}
+
+.historyRow {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 0;
+  border-bottom: 1px solid var(--border);
+}
+
+.historyMatch { font-size: 14px; font-weight: 600; color: var(--text); }
+
+.historyDate {
+  font-family: var(--font-mono);
+  font-size: 10px;
+  color: var(--muted);
+  margin-top: 2px;
+}
+
+.historyRight { text-align: right; }
+
+.historyPts {
+  font-family: var(--font-display);
+  font-size: 20px;
+  line-height: 1;
+}
+
+.ptsWin { color: var(--green); }
+.ptsLoss { color: #ef4444; }
+
+@media (max-width: 900px) {
+  .statsGrid { grid-template-columns: repeat(2, 1fr); }
+  .lowerGrid { grid-template-columns: 1fr; }
+}
